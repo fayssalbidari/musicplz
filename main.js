@@ -111,6 +111,11 @@ class a {
             throw new Error("Invalid text element provided.");
         }
 
+        if (typeof SplitType === "undefined") {
+            console.error("SplitType is not loaded. Cannot split text.");
+            return;
+        }
+
         this.textElement = e;
         this.splitText();
     }
@@ -121,11 +126,20 @@ class a {
             return;
         }
 
-        this.splitter = new p(this.textElement, { splitTypeTypes: "words, chars" });
-        this.originalChars = this.splitter.getChars().map(e => e.innerHTML);
+        try {
+            this.splitter = new p(this.textElement, { splitTypeTypes: "words, chars" });
+            this.originalChars = this.splitter.getChars().map(e => e.innerHTML);
+        } catch (error) {
+            console.error("Error initializing SplitType:", error);
+        }
     }
 
     animate() {
+        if (!this.splitter) {
+            console.error("Splitter is not initialized. Cannot animate.");
+            return;
+        }
+
         this.reset();
         this.splitter.getChars().forEach((t, s) => {
             const r = t.innerHTML;
@@ -154,6 +168,11 @@ class a {
     }
 
     reset() {
+        if (!this.splitter || !this.splitter.getChars) {
+            console.error("Splitter is not initialized properly.");
+            return;
+        }
+
         this.splitter.getChars().forEach((t, s) => {
             gsap.killTweensOf(t);
             t.innerHTML = this.originalChars[s];
