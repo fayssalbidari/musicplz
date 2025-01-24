@@ -1,5 +1,4 @@
 // Import debounce utility function.
-import SplitType from 'https://cdn.jsdelivr.net/gh/fayssalbidari/musicplz@b10176f/split-type.js';
 import { debounce } from 'https://cdn.jsdelivr.net/gh/fayssalbidari/musicplz@0b36d96/utils.js';
 
 // Defines a class to split text into lines, words and characters for animation.
