@@ -1,5 +1,5 @@
 // Import the TextSplitter class for handling text splitting.
-import { TextSplitter } from 'https://cdn.jsdelivr.net/gh/fayssalbidari/musicplz@dc7c5f2/textSplitter.js';
+import { TextSplitter } from 'https://cdn.jsdelivr.net/gh/fayssalbidari/musicplz@0a4fb32/textSplitter.js';
 
 const lettersAndSymbols = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '!', '@', '#', '$', '%', '^', '&', '*', '-', '_', '+', '=', ';', ':', '<', '>', ','];
 
