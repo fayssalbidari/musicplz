@@ -1,4 +1,4 @@
-import { TextAnimator } from 'https://cdn.jsdelivr.net/gh/fayssalbidari/musicplz@073ee49/text-animator.js';
+import { TextAnimator } from 'https://cdn.jsdelivr.net/gh/fayssalbidari/musicplz@6689277/text-animator.js';
 
 const init = () => {
   document.querySelectorAll('.list__item').forEach(item => {
